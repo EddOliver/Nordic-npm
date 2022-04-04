@@ -19,6 +19,17 @@ DISCLAIMER: This application is used for demonstrative and illustrative purposes
 
 # Introduction to this series
 
+Welcome to this three part series. This series aims to take certain Developer Kit component, namely the Excellent npm1100 Evaluation Kit to manage power, an NRF dev kit and some other miscelaneous components and build a complete IoT device. In this case we will be building an Electrocardiograph based on a past project, but we will take it as far as we can.
+
+The series will be divided into:
+
+Part 1: HARDWARE: Dev kit integration, system's architecture and component development.
+
+Part 2: SOFTWARE: Mobile App development and some AI and cloud integration.
+
+Part 3: FUNCTIONAL PROTOTYPE: We will go ahead and design, order and print a PCB within that System's architecture, test it and complete a much more robust prototype.
+
+Hopefully part three of this series will coincide with the market release of the npm1100 and we can go ahead and maybe go forward with this prototype and try to get it into a final stage and maybe even launch it. This of course covering everything from licences, certifications and all that process. But, for the moment let's get to the first part.
 
 # A little bit on the problem and why it is important to quantify health markers.
 
