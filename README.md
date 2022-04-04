@@ -15,12 +15,43 @@ NOTE: due to a manufacturing defect the polarity of the battery port is reversed
 
 <img src="./Images/invert.png">
 
+DISCLAIMER: This application is used for demonstrative and illustrative purposes only and does not constitute an offering that has gone through regulatory review. It is not intended to serve as a medical application. There is no representation as to the accuracy of the output of this application and it is presented without warranty.
+
 # Introduction to this series
 
 
 # A Little bit on the problem and why it is important to quantify health markers.
 
+Our heart beats 115200 times a day, it is such a fine machine that does not stop during our lives. However, not many people have the advantage to have this machine in good conditions. Many factors of daily life can permanently affect cardiac function.
 
+Factors such as:
+
+Sedentarism.
+Diet full of Salt, saturated fats and refined sugar.
+Alcoholic intake.
+Smoking
+High blood pressure
+Obesity
+Family history of heart disease
+History of a previous heart attack
+Sge over 45 for men, or over 55 for women
+Male gender (there's a direct correlation for cardiovascular disease)
+Substance abuse
+Low potassium or magnesium
+This brings us to our pain point:
+
+Quite a lot of people have to undergo cardiac tests frequently in expensive hospitals with gigantic measuring devices. We are in a time where open health is stronger than ever and it is time to make the patient the point of care.
+
+The market for electrocardiography is quite enormous, as it has become the standard for patients with heart risks.
+
+<img src="https://hackster.imgix.net/uploads/attachments/1311694/image_6HoGEtNXFh.png?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+What we can see in this graphic is that most of the electrocardiographs are those big machines (as a Biomedical Engineer I can attest that most, are quite old). In addition to this most in the "holter" category are not really wearables but smaller ones that can be carried despite that a wearable one that can be used at home could provide invaluable information about the patient's heart.
+
+One thing that we have to notice first. The first of wearables has already come out in the market and the results are not that great. The main issue that Doctors put forth is that it is too much information, think of the internet before data aggregators, it has no value if it cannot be interpreted correctly and that is something that has to be taken into consideration. A solution should aggregate all that data and provide carers with useful information.
+
+Second Problem
+This brings us to the second problem that is quite basic, most EKG machines whether they are Holter's or Rest EKGs use gel-based electrodes. These are completely unusable in an athletic environment i.e. Athletes trying to measure themselves during activity. For these reasons we will try while developing the IoT device, to develop at the same time Dry electrodes.
 
 
 # Design:
