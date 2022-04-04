@@ -1,40 +1,48 @@
 # Nordic-BLE-EKG
  
-Este es el repositorio principal para el Modulo EKG BLE para nordic.
+This is the main repository for the npm11
 
 # Components:
 
-Todos los componentes se pensaron para usarse con el ecosistema de Nordic y ser de bajo consumo energetico.
+All components are designed to be used with the Nordic ecosystem and to be energy efficient..
 
 - [nPM1100 EK](https://www.nordicsemi.com/Products/Development-hardware/nPM1100-EK)
 - [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html)
 - [ECG 3 click](https://www.mikroe.com/ecg-3-click)
 - LiPo Battery 3.7v, 4.2v max, 1C
 
-NOTE: debido a un defecto de facbricacion la polaridad de el puerto de la bateria esta invertido, entonces si deseas usar el mismo nPM1100 para este proyecto recuerda invertir la polaridad del conector como se muetsra el diagrama, de no hacerlo corres el riesgo de hacer un corto circuito.
+NOTE: due to a manufacturing defect the polarity of the battery port is reversed, so if you wish to use the same nPM1100 for this project remember to reverse the polarity of the connector as shown in the diagram, otherwise you run the risk of making a big mistake. Short circuits are not fun. This was just the case of MY OWN npm device, you have to check the polarity of your own if you wish to replicate this project.
 
 <img src="./Images/invert.png">
 
+# Introduction to this series
+
+
+# A Little bit on the problem and why it is important to quantify health markers.
+
+
+
+
 # Design:
 
-Este es el diagrama de conexiones de los componentes por separado del circuito si es que deseas hacerlo de forma modular con estas piezas, sin embargo proximamente se hara una PCB con todos los componentes sobre el.
+This is the connection diagram of the components separately from the circuit if you want to do it in a modular way with these pieces, however, a PCB will be made soon with all the components on it.
 
-- La comunicacion con el ECG se realiza mediante protocolo SPI, a diferencia de otros modulos mas econocmicos como el AD8232 que se manejan con lecturas analogas y ocupan un ADC.
-- La energia que estamos suministrando con la nPM1100 EK es de 3v, que es el voltaje maximo que suministra el EK.
+- Communication with the ECG is done through the SPI protocol, unlike other more economical modules such as the AD8232 that are handled with analog readings and occupy an ADC.
+- The power that we are supplying with the nPM1100 EK is 3v, which is the maximum voltage that the EK supplies.
 
 <img src="./Images/Design_bb.png">
 
-La configuracion del EK es la siguiente.
+The EK configuration is as follows.
 
 <img src="./Images/EKconfig.png">
 
 # Connection Diagram:
 
-Para el uso del device se conecto un cable de ECG conectado en los brazos al modulo de ECG, el cual tiene una entrada Jack, posteriormente este mediante BLE le manda los datos a una frecuencia de 100Hz a la app para poder visualizar una grafica coherente.
+To use the device, an ECG cable connected to the arms was connected to the ECG module, which has a Jack input, later this through BLE sends the data at a frequency of 100Hz to the app to be able to visualize a coherent graph.
 
 <img src="./Images/diagram.png">
 
-Due to the fact that this is a device that we are going to be using for long periods of time and it is also a device that must be used every day, we soon understood that the use of disposable electrodes is not feasible. So that's why we decided to make our own dry electrodes.
+Due to the fact that this is a device that we are going to be using for long periods of time and it is also a device that must be used every day, we can understand that the use of disposable electrodes is not feasible. So that's why we decided to make our own dry electrodes.
 
 Materials:
 
@@ -46,7 +54,7 @@ Materials:
 
 # BLE Service:
 
-Toda la informacion del ECG se manda a una frecuencia de 100Hz al device que se conecte a el.
+All ECG information is sent at a frequency of 100Hz to the device that is connected to it.
 
 <img src="./Images/ble.png">
 
@@ -63,28 +71,33 @@ Toda la informacion del ECG se manda a una frecuencia de 100Hz al device que se 
 
 # Power consumption:
 
-Dentro de la documentacion oficial indican como leer el consumo de corriente del nPM con la PPKII.
+Within the official documentation they indicate how to read the current consumption of the nPM with the PPKII.
 
 <img src="./Images/ppk-example.png">
 
 [Nordic Official Documentation](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_npm1100_ek%2FUG%2FnPM1100_EK%2Fppk2_current_measurement.html)
 
-El consumo energetico de todo nuestro diseño es menor a 10mAh, como se puede ver en nuestras mediciones con el PPKII.
+The power consumption of our entire design is less than 10mAh, as can be seen in our measurements with the PPKII.
 
-- Conexion del POC al PPKII en modo Ampere Meter.
+- Connection of the POC to the PPKII in Ampere Meter mode.
 
 <img src="./Images/ppk.jpg">
 
-- Mediciones del device, tenemos picos de 20mA debido a la lectura de los datos del ECG cada 10ms.
+- Device measurements, we have peaks of 20mA due to the reading of the ECG data every 10ms.
 
 <img src="./Images/ppk-20220315T223256.png">
 
-- Aqui una prueba de consumo de 2 min.
-
+- Here is a 2 min consumption test.
+- 
 <img src="./Images/2minTest.png">
 
 # POC:
 
-Finalmente ponemos todo en una bonita case.
+Finally we put everything in a 3D printed case for the moment.
 
 <img src="./Images/20220316_235156.jpg">
+
+# End of Part 1 and Next steps:
+
+As a three part series this is just the initial design, component selection, showcase of the npm1100
+
