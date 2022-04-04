@@ -147,9 +147,9 @@ The power consumption of our entire design is less than 10mAh, as can be seen in
 - 
 <img src="./Images/2minTest.png">
 
-# POC:
+# Proof of Concept:
 
-Finally we put everything in a 3D printed case for the moment.
+Finally we put everything in a 3D printed case for the moment so we can test it.
 
 <img src="./Images/20220316_235156.jpg">
 
