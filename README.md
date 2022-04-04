@@ -1,10 +1,10 @@
 # Nordic-BLE-EKG
  
-This is the main repository for the npm11
+This is the main repository for the npm1100 evaluation Kit by Nordic.
 
 # Components:
 
-All components are designed to be used with the Nordic ecosystem and to be energy efficient..
+All components are designed to be used with the Nordic ecosystem and to be energy efficient.
 
 - [nPM1100 EK](https://www.nordicsemi.com/Products/Development-hardware/nPM1100-EK)
 - [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html)
@@ -20,7 +20,7 @@ DISCLAIMER: This application is used for demonstrative and illustrative purposes
 # Introduction to this series
 
 
-# A Little bit on the problem and why it is important to quantify health markers.
+# A little bit on the problem and why it is important to quantify health markers.
 
 Our heart beats 115200 times a day, it is such a fine machine that does not stop during our lives. However, not many people have the advantage to have this machine in good conditions. Many factors of daily life can permanently affect cardiac function.
 
@@ -50,13 +50,13 @@ What we can see in this graphic is that most of the electrocardiographs are thos
 
 One thing that we have to notice first. The first of wearables has already come out in the market and the results are not that great. The main issue that Doctors put forth is that it is too much information, think of the internet before data aggregators, it has no value if it cannot be interpreted correctly and that is something that has to be taken into consideration. A solution should aggregate all that data and provide carers with useful information.
 
-Second Problem
+## Second Problem
 This brings us to the second problem that is quite basic, most EKG machines whether they are Holter's or Rest EKGs use gel-based electrodes. These are completely unusable in an athletic environment i.e. Athletes trying to measure themselves during activity. For these reasons we will try while developing the IoT device, to develop at the same time Dry electrodes.
 
 
 # Design:
 
-This is the connection diagram of the components separately from the circuit if you want to do it in a modular way with these pieces, however, a PCB will be made soon with all the components on it.
+This is the connection diagram of the components separately from the circuit if you want to do it in a modular way with these pieces, however, a PCB will be made soon with all the components on it on part 3 of this series.
 
 - Communication with the ECG is done through the SPI protocol, unlike other more economical modules such as the AD8232 that are handled with analog readings and occupy an ADC.
 - The power that we are supplying with the nPM1100 EK is 3v, which is the maximum voltage that the EK supplies.
