@@ -63,6 +63,8 @@ This is the connection diagram of the components separately from the circuit if 
 
 <img src="./Images/Design_bb.png">
 
+Basically, through the nRF gateway and cloud we get the signals from our microcontroller, we clean it a bit and then send it to our dashboard.
+
 The EK configuration is as follows.
 
 <img src="./Images/EKconfig.png">
@@ -82,6 +84,29 @@ Materials:
 - Electrode External Snap.
 
 <img src="https://hackster.imgix.net/uploads/attachments/1253077/68747470733a2f2f692e6962622e636f2f684c5a384454422f32303231303133302d3230343031332e706e67.png?auto=compress%2Cformat&w=1280&h=960&fit=max">
+
+## Electrode arrangement
+In order to read the EKG and also make the device as comfortable as possible, we take into consideration the arrangement of Electrodes of the AppleWatch
+
+<img src="https://hackster.imgix.net/uploads/attachments/1311696/68747470733a2f2f692e6962622e636f2f6b63793558594e2f696d6167652e706e67.png?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+CR Apple Computers
+
+First we place two electrodes on the right hand and one on the left hand as follows.
+
+Right:
+
+<img src="https://hackster.imgix.net/uploads/attachments/1311697/68747470733a2f2f692e6962622e636f2f32364c466e47582f32303231303133302d3230353835382e6a7067.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+Left:
+
+<img src="https://hackster.imgix.net/uploads/attachments/1311698/68747470733a2f2f692e6962622e636f2f744434737063322f32303231303133302d3230353833322e6a7067.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+Ground:
+
+<img src="https://hackster.imgix.net/uploads/attachments/1311699/68747470733a2f2f692e6962622e636f2f66594c355732582f32303231303133302d3230353930302e6a7067.jpeg?auto=compress%2Cformat&w=740&h=555&fit=max">
+
+With this arrangement of electrodes we can obtain an ECG signal that while not perfect, we can fix with a little processing.
 
 # BLE Service:
 
@@ -127,6 +152,10 @@ The power consumption of our entire design is less than 10mAh, as can be seen in
 Finally we put everything in a 3D printed case for the moment.
 
 <img src="./Images/20220316_235156.jpg">
+
+Here is a video demo:
+
+
 
 # End of Part 1 and Next steps:
 
